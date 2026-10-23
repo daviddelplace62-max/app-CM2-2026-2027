@@ -1,0 +1,110 @@
+{
+  "date": "2026-10-23T17:47:09.796Z",
+  "scope": "Socle technique uniquement, couverture pédagogique non vérifiée",
+  "results": [
+    {
+      "name": "Chargement sans erreur JavaScript",
+      "status": "réussi"
+    },
+    {
+      "name": "Création de deux profils et présélection des thèmes",
+      "status": "réussi"
+    },
+    {
+      "name": "Saisie numérique et accents : parseur",
+      "status": "réussi"
+    },
+    {
+      "name": "Parcours francais : accès, erreur bloquante, indices, retour et validation",
+      "status": "réussi"
+    },
+    {
+      "name": "Parcours mathematiques : accès, erreur bloquante, indices, retour et validation",
+      "status": "réussi"
+    },
+    {
+      "name": "Parcours histoire : accès, erreur bloquante, indices, retour et validation",
+      "status": "réussi"
+    },
+    {
+      "name": "Parcours geographie : accès, erreur bloquante, indices, retour et validation",
+      "status": "réussi"
+    },
+    {
+      "name": "Parcours sciences : accès, erreur bloquante, indices, retour et validation",
+      "status": "réussi"
+    },
+    {
+      "name": "Parcours anglais : accès, erreur bloquante, indices, retour et validation",
+      "status": "réussi"
+    },
+    {
+      "name": "Parcours emc : accès, erreur bloquante, indices, retour et validation",
+      "status": "réussi"
+    },
+    {
+      "name": "Parcours arts-plastiques : accès, erreur bloquante, indices, retour et validation",
+      "status": "réussi"
+    },
+    {
+      "name": "Parcours musique : accès, erreur bloquante, indices, retour et validation",
+      "status": "réussi"
+    },
+    {
+      "name": "Parcours histoire-arts : accès, erreur bloquante, indices, retour et validation",
+      "status": "réussi"
+    },
+    {
+      "name": "Parcours eps : accès, erreur bloquante, indices, retour et validation",
+      "status": "réussi"
+    },
+    {
+      "name": "Progression pondérée, profils indépendants et absence de double points",
+      "status": "réussi"
+    },
+    {
+      "name": "Activité réalisée distincte de observation adulte",
+      "status": "réussi"
+    },
+    {
+      "name": "Positions indépendantes et sauvegarde après rechargement",
+      "status": "réussi"
+    },
+    {
+      "name": "Changement thème et surnom sans perte ; HTML du surnom échappé",
+      "status": "réussi"
+    },
+    {
+      "name": "Export JSON valide, refus import invalide et restauration import",
+      "status": "réussi"
+    },
+    {
+      "name": "Import : objets imbriqués malformés et dates invalides refusés",
+      "status": "réussi"
+    },
+    {
+      "name": "Annulation import conserve tous les profils",
+      "status": "réussi"
+    },
+    {
+      "name": "Menu mobile : focus, Échap, fermeture fond, clavier",
+      "status": "réussi"
+    },
+    {
+      "name": "Aucun débordement horizontal à 360, 390 et 1440 pixels",
+      "status": "réussi"
+    },
+    {
+      "name": "Avertissement visible si stockage indisponible",
+      "status": "réussi"
+    },
+    {
+      "name": "Suppression profil : annulation puis confirmation",
+      "status": "réussi"
+    },
+    {
+      "name": "Aucune erreur JavaScript après redimensionnement",
+      "status": "réussi"
+    }
+  ]
+}
