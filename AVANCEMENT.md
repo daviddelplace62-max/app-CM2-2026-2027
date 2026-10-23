@@ -14,7 +14,7 @@ Application complète CM2 2026-2027 demandée. Dépôt neuf, application de suit
 4. Moteur technique réalisé : profils, thèmes, navigation, sauvegarde et validation. Recette navigateur HTTP exécutée ; voir RAPPORT_TESTS.md pour le détail exact. La politique Chromium bloque les URL file://, donc le double-clic reste non vérifié.
 5. Contenus : aucun cours disciplinaire rédigé ; attendre la vérification officielle obligatoire.
 6. Exhaustivité : non vérifiée. Aucune prétention de couverture complète.
-7. Livraison : guide du prototype écrit ; aucun déploiement Netlify ni fusion main autorisé automatiquement.
+7. Livraison : guide du prototype écrit ; branche dédiée publiée sur GitHub, archive ZIP téléchargée et vérifiée. 26 scénarios Chromium réussis. Aucun déploiement Netlify ni fusion dans main effectué.
 
 ## Prochaine reprise
 

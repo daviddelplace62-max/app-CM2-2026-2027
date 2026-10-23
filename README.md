@@ -2,9 +2,11 @@
 
 **Ce dépôt ne contient pas encore les cours du programme CM2.** La consultation préalable des sites officiels est bloquée (HTTP 403). Les activités visibles sont des essais informatiques, explicitement marqués. Ne pas utiliser cette version comme support complet d’apprentissage. Consulter [SOURCES.md](SOURCES.md), [COUVERTURE_PROGRAMME.md](COUVERTURE_PROGRAMME.md), [AVANCEMENT.md](AVANCEMENT.md) et le rapport des tests pour les limites précises.
 
+[Télécharger le prototype technique en ZIP](https://github.com/daviddelplace62-max/app-CM2-2026-2027/archive/refs/heads/developpement/cm2-2026-2027.zip) — archive téléchargée et intégrité/contenu vérifiés le 23 octobre 2026. Il ne s’agit pas de la livraison du programme scolaire complet.
+
 ## Essayer le prototype sur ordinateur
 
-1. Sur GitHub, ouvrir la branche de travail si elle a été publiée. Choisir **Code → Download ZIP**. Aucun lien public de téléchargement n’est garanti tant qu’il n’a pas été testé.
+1. Utiliser le lien ZIP ci-dessus, ou ouvrir la branche `developpement/cm2-2026-2027` sur GitHub et choisir **Code → Download ZIP**.
 2. Décompresser toute l’archive dans un dossier. Conserver ensemble `index.html`, `styles.css`, `contents.js` et `app.js`.
 3. Le dossier utilise des scripts classiques, sans chargement JSON ni module, pour permettre le double-clic sur `index.html`. Attention : le navigateur de cet environnement bloque les URL file:// par sa politique administrateur ; le fonctionnement par double-clic n’a donc pas été validé ici. La recette fonctionnelle est exécutée avec un serveur HTTP local. Aucun compte ou clé API n’est requis pour le prototype.
 4. Créer un profil avec un surnom, puis un second. Essayer une activité de recette avec le premier et vérifier que le second conserve son propre état.
