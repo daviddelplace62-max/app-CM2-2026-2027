@@ -1,0 +1,7 @@
+.voice-player { border: 2px solid var(--line, #d7c9e3); border-radius: 18px; padding: 1rem; margin: 1.3rem 0; background: var(--card, white); }
+.voice-player h3 { margin-top: 0; }
+.voice-transcript { line-height: 1.8; font-size: 1.06rem; overflow-wrap: anywhere; }
+.voice-buttons { display: flex; gap: .6rem; flex-wrap: wrap; }
+.voice-buttons button { min-height: 44px; min-width: 110px; }
+.voice-status { line-height: 1.6; font-size: .92rem; }
+@media (max-width: 420px) { .voice-buttons button { flex: 1 1 42%; min-width: 0; padding-inline: .5rem; } }

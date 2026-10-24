@@ -124,11 +124,12 @@ window.CM2_SUBJECTS.push({
           "exercises": [
             {
               "type": "number",
-              "prompt": "Complète : 3/4 = …/12.",
+              "prompt": "Complète : 3/4 = …/12. Écris le numérateur manquant, ou la fraction complète avec 12 au dénominateur.",
               "answer": 9,
               "hint": "Le dénominateur a été multiplié par 3.",
               "explanation": "3×3=9 et 4×3=12, donc 3/4=9/12.",
-              "id": "mathematiques-fractions-equivalentes-ex1"
+              "id": "mathematiques-fractions-equivalentes-ex1",
+              "completionDenominator": 12
             },
             {
               "type": "choice",
@@ -356,11 +357,12 @@ window.CM2_SUBJECTS.push({
             },
             {
               "type": "number",
-              "prompt": "Quel numérateur manque : 0,032 = …/1000 ?",
+              "prompt": "Complète : 0,032 = …/1000. Écris le numérateur manquant, ou la fraction complète avec 1000 au dénominateur.",
               "answer": 32,
               "hint": "Lis trente-deux millièmes.",
               "explanation": "0,032=32/1000.",
-              "id": "mathematiques-decimaux-ecritures-ex3"
+              "id": "mathematiques-decimaux-ecritures-ex3",
+              "completionDenominator": 1000
             }
           ],
           "prerequisite": "Si nécessaire, dessine la situation ou reprends l’exemple avant de calculer. Les exercices précédents du chapitre servent de préparation.",

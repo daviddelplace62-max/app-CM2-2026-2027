@@ -6,13 +6,13 @@ Cette version contient **340 étapes et 820 exercices ou activités**, répartis
 
 ## Télécharger et ouvrir
 
-1. Ouvrir la branche de travail sur GitHub : https://github.com/daviddelplace62-max/app-CM2-2026-2027/tree/developpement/cm2-2026-2027 . La branche principale n’est pas modifiée automatiquement.
+1. Ouvrir la branche de travail sur GitHub : https://github.com/daviddelplace62-max/app-CM2-2026-2027/tree/ameliorations/voix-et-visuels . La branche principale n’est pas modifiée automatiquement.
 2. Choisir **Code**, puis **Download ZIP**. Le lien de l’archive finale effectivement vérifiée figurera dans le bilan de livraison.
 3. Faire **Extraire tout** sur l’archive. Ne pas ouvrir uniquement `index.html` à l’intérieur du ZIP.
-4. Dans le dossier extrait, repérer `index.html`, `styles.css`, `app.js`, `contents.js`, le dossier `contenus` et le dossier `ressources`. Conserver toute cette organisation.
+4. Dans le dossier extrait, repérer `index.html`, les fichiers JavaScript et CSS, ainsi que les dossiers `contenus` et `ressources`. Conserver tous les fichiers et sous-dossiers : les nouveaux fichiers de voix et de supports visuels sont nécessaires.
 5. Le code est prévu pour l’ouverture de `index.html` par double-clic : scripts classiques, aucune requête JSON, aucun module ni CDN. **Le navigateur cloud bloque toutefois file:// par politique administrateur ; le double-clic n’a pas été validé ici.** Si votre navigateur refuse l’ouverture locale, utiliser la publication Netlify ci-dessous, qui ne demande aucune installation sur le PC.
 
-Une fois les fichiers chargés dans l’onglet, les leçons et exercices n’ont pas besoin d’un service externe. Les extraits musicaux sont inclus localement dans une bibliothèque audio embarquée. Cela ne promet pas une réouverture du site hors connexion : aucun service worker n’est installé.
+Une fois les fichiers chargés dans l’onglet, les leçons et exercices n’ont pas besoin d’un service externe. Les extraits musicaux et les 23 passages anglais sont inclus localement dans des bibliothèques audio embarquées. Cela ne promet pas une réouverture du site hors connexion : aucun service worker n’est installé.
 
 ## Premiers essais avec deux profils
 
@@ -34,7 +34,15 @@ L’écriture, l’oral, les arts, la musique, l’EPS et les expériences compo
 
 Le parcours propose des révisions et des expériences ; il ne remplace pas les séances quotidiennes, les échanges en classe ou les situations physiques réelles prévues à l’école. Pour l’EPS, les activités aquatiques et la circulation, suivre les conditions d’encadrement indiquées. Les séances d’EVAR sont accompagnées et ne demandent aucune confidence personnelle enregistrée. Les sept œuvres locales sont une sélection de formes courtes ; conserver aussi les lectures personnelles et la fréquentation d’une bibliothèque.
 
-Pour l’anglais, le bouton d’écoute utilise une **voix anglaise locale** du navigateur si elle existe. Un message explique son absence éventuelle et invite à lire avec un adulte. Aucun score automatique de prononciation n’est calculé. Les chants et extraits instrumentaux originaux de musique sont fournis dans l’application.
+Pour l’anglais, **23 passages préenregistrés** sont inclus dans le dossier : aucune voix installée sur le téléphone n’est requise. Les boutons permettent d’écouter, mettre en pause, arrêter et répéter, avec une vitesse plus lente au choix. La phrase reste affichée si un fichier ne peut pas être lu. Il s’agit d’une voix synthétique en anglais américain ; le décodage et la lecture sont testés, sans prétendre à une écoute humaine intégrale de toutes les prononciations. Aucun score de prononciation de l’enfant n’est calculé. Voir [la provenance et les licences des voix](ressources/voix/NOTICE.md). Les chants et extraits instrumentaux de musique restent également fournis dans l’application.
+
+## Illustrations et manipulations
+
+**47 supports SVG originaux** complètent les notions qui bénéficient d’un dessin : fractions, nombres décimaux, calcul, conversions, géométrie, frises, plans, sciences et vocabulaire anglais. Le détail des leçons enrichies est dans [SUPPORTS_VISUELS.md](SUPPORTS_VISUELS.md). Les plans fictifs, modèles simplifiés et schémas sans échelle sont identifiés ; aucun dessin n’est présenté comme une photographie d’archive.
+
+Cinq types de manipulation proposent des curseurs, listes ou boutons utilisables au clavier et au toucher. **Démarrer la démonstration** lance une courte séquence ; **Pause** l’arrête et **Recommencer** rétablit le point de départ. Une version statique et une explication restent accessibles. Les réglages de réduction des mouvements désactivent l’animation, en conservant les commandes manuelles. Ces essais n’attribuent pas de points et ne valident pas les exercices à la place de l’élève.
+
+Pour les deux questions à numérateur manquant, les réponses peuvent être saisies sous les formes **9** ou **9/12** pour `3/4 = …/12`, et **32** ou **32/1000** pour `0,032 = …/1000`. La consigne le précise ; il ne faut pas confondre le nombre à placer dans le trou avec la valeur de la fraction complète.
 
 ## Comprendre les résultats
 

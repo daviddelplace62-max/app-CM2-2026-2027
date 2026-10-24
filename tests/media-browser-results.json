@@ -1,0 +1,96 @@
+{
+  "date": "2026-10-24T19:09:05.724Z",
+  "browser": "154.0.8037.57",
+  "testedAssets": {
+    "index.html": "efee3d1ec3f7a74a3f3e98d1124a7809de4866e4224064dbcb1e9bf6742ebdc1",
+    "styles.css": "64d7aec27120360fdd512b9cbd2318eff214fb3455b0ebcb1eba1c3879a15395",
+    "voix.css": "99209f73ec6bc2e0ef11c9ea9d4fdcb5bc9c526d091db68fdcf66011c0a0be3e",
+    "visuels.css": "0ed80a7c4f98f551bd5861497eaf7379d7e508aad0c0d729b1730944257a1ac1",
+    "contenus/francais.js": "1fb49894f5f435707e240ec26411270420fd8654cf8d396bf840c52701d4010f",
+    "contenus/mathematiques.js": "256356da6a58d741292d12bd481e38888370126ced104715be721d0dab7da0d2",
+    "contenus/histoire.js": "eae72015b065db51e7d2e23d34ed813163cf366f2e15435119d91aac75739d79",
+    "contenus/geographie.js": "4d29e7acab366eb89d4a541a3ccba78d4fee2fff0e8d3046fc7dd88334fb1ea9",
+    "contenus/sciences.js": "74b544c43406b7b108c9893938849c96516996ea2929e8af72d47286573b899f",
+    "contenus/anglais.js": "22861ba3f9ec69fe31f326c48095a72fefc40b451e7901de5056c16dca542c24",
+    "contenus/emc.js": "cdb8ea4952f49a8528518e71d2f6fe691da0a0795f63bfcdf1ee2c884bf15b84",
+    "contenus/arts-plastiques.js": "88dc954fbb2c51d5befe560b8f9fa6bcfe78626db82faf1e9ecf183705257303",
+    "contenus/musique.js": "a6939471a0543de827cb2dea3779b4db523718e5ad9508a4c482a91a8602b04e",
+    "contenus/histoire-arts.js": "49c9171d157e68e819c420b92a0d97a0a1ec54577d2b76802b3255ebf6ca9bf5",
+    "contenus/eps.js": "a20e33ad4f15815be6e8e9e1c7bd5385c3ab9a0b54f359b214090137c0090857",
+    "contenus/transversaux.js": "2fe54bd8983fade44f48a0a38e81052833f61a91001c36b06a20f5c486d794f8",
+    "ressources/audio/data.js": "e4e0081c793292ce42563b213f2921649d89c82ff429d50c3fde91aa391e2a7c",
+    "contenus/bibliotheque.js": "177029d477b961c94ec804e3eca277018a64ad822bdb5d7aa46a7a2e189aa167",
+    "contents.js": "155341b22068576c030d3eefe5b6daa6333930055c3fd30a60b74e741467b584",
+    "ressources/voix/data.js": "58c41ac7b1c9991408bed624e33203503e14cc438b0aa07b5794a5c594b2fa58",
+    "voix.js": "d47b4dc8f0a32bf656f885b34fb1739ac47303304dce71d00f5e3f652d91d614",
+    "contenus/supports-visuels.js": "7b11f091bb5002d0233308f21ba7856101cf37c0e278b6f84956ec7aa46fff5c",
+    "supports-visuels.js": "32354acc9c549df4bb491d652b35746c54d930d8022dc2e3ce68e6c141f6aa57",
+    "app.js": "cf4d6ef9276d76013b23195bb8f26a6c2fb52a5f71185f5b1681d23d815de2f0"
+  },
+  "results": [
+    {
+      "name": "Toutes les voix anglaises sont utilisables sans aucune synthèse vocale du navigateur",
+      "status": "réussi"
+    },
+    {
+      "name": "La navigation arrête le lecteur vocal et ne modifie pas la validation de la leçon",
+      "status": "réussi"
+    },
+    {
+      "name": "Audio absent ou illisible : message explicite et texte conservé",
+      "status": "réussi"
+    },
+    {
+      "name": "Fractions à compléter : numérateur seul ou fraction entière correcte acceptés",
+      "status": "réussi"
+    },
+    {
+      "name": "Tous les supports déclarés possèdent un rendu local lisible et une description",
+      "status": "réussi"
+    },
+    {
+      "name": "Manipulation fraction : clavier/toucher, démarrer, pause, recommencer et version statique",
+      "status": "réussi"
+    },
+    {
+      "name": "Manipulation numberline : clavier/toucher, démarrer, pause, recommencer et version statique",
+      "status": "réussi"
+    },
+    {
+      "name": "Manipulation symmetry : clavier/toucher, démarrer, pause, recommencer et version statique",
+      "status": "réussi"
+    },
+    {
+      "name": "Manipulation circuit : clavier/toucher, démarrer, pause, recommencer et version statique",
+      "status": "réussi"
+    },
+    {
+      "name": "Manipulation timeline : clavier/toucher, démarrer, pause, recommencer et version statique",
+      "status": "réussi"
+    },
+    {
+      "name": "Réduction des mouvements : démonstrations désactivées mais commandes manuelles actives",
+      "status": "réussi"
+    },
+    {
+      "name": "La navigation arrête les démonstrations et conserve les sauvegardes",
+      "status": "réussi"
+    },
+    {
+      "name": "Supports et lecteurs : aucun débordement aux largeurs360,390et1440",
+      "status": "réussi"
+    },
+    {
+      "name": "Aucun service distant, requête tardive ou erreur JavaScript pendant les médias",
+      "status": "réussi"
+    },
+    {
+      "name": "Les médias testés correspondent aux fichiers gelés",
+      "status": "réussi"
+    }
+  ],
+  "external": [],
+  "lateNetwork": [],
+  "errors": [],
+  "scope": "Interactions réellement exécutées ; prononciation et lecture sur haut-parleurs physiques non certifiées."
+}

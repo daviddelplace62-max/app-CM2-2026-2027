@@ -9,7 +9,6 @@
   let state = { version: 1, profiles: [], active: null };
   let view = { page: 'dashboard' };
   let returnFocus = null;
-  let voiceListeners = [];
 
   function valid(data) {
     const plain = value => !!value && typeof value === 'object' && !Array.isArray(value) && Object.getPrototypeOf(value) === Object.prototype;
@@ -99,6 +98,14 @@
     }
     if (!String(value ?? '').trim()) return { valid: false, correct: false };
     if (exercise.type === 'number') {
+      // Un trou dans une fraction attend un numérateur. Accepter aussi la
+      // fraction complète écrite avec le dénominateur demandé, sans assimiler
+      // cette quantité au nombre à placer dans le trou.
+      if (exercise.completionDenominator && String(value).includes('/')) {
+        const parts = String(value).trim().replace(',', '.').match(/^([+-]?\d+(?:\.\d+)?)\s*\/\s*(\d+(?:\.\d+)?)$/);
+        if (!parts || Number(parts[2]) !== exercise.completionDenominator) return { valid: false, correct: false, message: 'Garde le dénominateur ' + exercise.completionDenominator + ' : écris seulement le numérateur, ou la fraction complète.' };
+        return { valid: true, correct: Math.abs(Number(parts[1]) - Number(exercise.answer)) <= 1e-9 };
+      }
       const response = num(value), expected = num(exercise.answer);
       if (!response || !expected) return { valid: false, correct: false };
       const allowedUnit = exercise.unit || expected.unit;
@@ -123,7 +130,8 @@
     $('#nav').querySelectorAll('[data-subject]').forEach(button => button.onclick = () => go({ page: 'subject', subject: button.dataset.subject }));
   }
   function go(nextView) {
-    if ('speechSynthesis' in window) speechSynthesis.cancel();
+    window.CM2_VOICEPLAYER?.stop();
+    window.CM2_VISUALS?.stop();
     view = nextView;
     closeMenu();
     render();
@@ -131,8 +139,8 @@
     window.scrollTo(0, 0);
   }
   function render() {
-    if ('speechSynthesis' in window) voiceListeners.forEach(listener => speechSynthesis.removeEventListener('voiceschanged', listener));
-    voiceListeners = [];
+    window.CM2_VOICEPLAYER?.stop();
+    window.CM2_VISUALS?.stop();
     const child = profile();
     document.body.dataset.theme = child?.theme || 'squishy';
     document.body.classList.toggle('reduce-motion', !!child?.reduceMotion);
@@ -284,33 +292,14 @@
   }
   function soundHTML(item) {
     let html = '';
-    if (item.speak) html += `<div class="speech"><button type="button" data-speak="${esc(item.speak)}">🔊 Écouter en anglais</button><p class="speech-status muted" role="status">La voix anglaise dépend de ce navigateur. Aucune prononciation n’est évaluée automatiquement.</p></div>`;
+    if (item.speak) html += window.CM2_VOICEPLAYER?.render(item) || '<p>Enregistrement indisponible ; le texte reste accessible.</p>';
     if (item.audio) html += `<figure class="local-audio"><figcaption>${esc(item.audioCaption || 'Écoute musicale')}</figcaption><audio controls preload="auto" src="${esc(window.CM2_AUDIO?.[item.audio] || item.audio)}">Ton navigateur ne permet pas la lecture audio.</audio></figure>`;
     if (Array.isArray(item.lyrics)) html += `<div class="lyrics">${item.lyrics.map(line => `<p>${esc(line)}</p>`).join('')}</div>`;
     return html;
   }
   function bindSounds() {
-    main.querySelectorAll('[data-speak]').forEach(button => {
-      const status = button.parentElement.querySelector('.speech-status');
-      const update = () => {
-        if (!('speechSynthesis' in window) || typeof window.SpeechSynthesisUtterance !== 'function') { button.disabled = true; status.textContent = 'La synthèse vocale est indisponible. Lis le texte avec un adulte ; cette activité reste accessible. La prononciation n’est pas évaluée automatiquement.'; return; }
-        const voices = speechSynthesis.getVoices().filter(voice => voice.localService === true && /^en(?:-|_|$)/i.test(voice.lang));
-        button.disabled = !voices.length;
-        status.textContent = voices.length ? 'Voix anglaise locale disponible, sans service distant. Tu peux écouter et répéter avec un adulte ; la prononciation n’est pas notée automatiquement.' : 'Aucune voix anglaise locale disponible pour le moment. Le texte reste lisible ; tu peux le travailler avec un adulte. La prononciation n’est pas évaluée automatiquement.';
-      };
-      update();
-      button.onclick = () => {
-        const voices = speechSynthesis.getVoices().filter(voice => voice.localService === true && /^en(?:-|_|$)/i.test(voice.lang));
-        if (!voices.length) return update();
-        speechSynthesis.cancel();
-        const phrase = new SpeechSynthesisUtterance(button.dataset.speak);
-        phrase.voice = voices.find(voice => voice.localService) || voices[0]; phrase.lang = phrase.voice.lang; phrase.rate = 0.85;
-        phrase.onerror = () => { status.textContent = 'La lecture audio a échoué. Le texte reste disponible. La prononciation n’est pas évaluée automatiquement.'; };
-        speechSynthesis.speak(phrase);
-      };
-      if ('speechSynthesis' in window) { speechSynthesis.addEventListener('voiceschanged', update); voiceListeners.push(update); }
-    });
-    main.querySelectorAll('audio').forEach(audio => audio.onerror = () => { const message = document.createElement('p'); message.className = 'notice'; message.textContent = 'Cet audio ne peut pas être lu. Les consignes et la grille restent disponibles ; demande une autre écoute à un adulte.'; audio.after(message); });
+    window.CM2_VOICEPLAYER?.bind(main);
+    main.querySelectorAll('audio:not(.voice-audio)').forEach(audio => audio.onerror = () => { const message = document.createElement('p'); message.className = 'notice'; message.textContent = 'Cet audio ne peut pas être lu. Les consignes et la grille restent disponibles ; demande une autre écoute à un adulte.'; audio.after(message); });
   }
   function step() {
     const child = profile(), item = allSteps().find(item => item.id === view.step);
@@ -319,7 +308,7 @@
     const rec = record(child, item.id);
     item.exercises.filter(exercise => exercise.type === 'guided').forEach(exercise => activityRecord(rec, exercise));
     save();
-    main.innerHTML = notice() + `<button id="back" data-testid="back">← Retour au chapitre</button><p class="eyebrow">${esc(content.find(subject => subject.id === item.subjectId).title)} · ${esc(item.chapterTitle)}</p>${item.notion ? `<p class="notion-label">Notion : ${esc(item.notion)}</p>` : ''}<h1>${esc(item.title)}</h1><section class="lesson"><h2>🎯 Mon objectif</h2><p>${esc(item.objective)}</p>${item.prerequisite ? `<details><summary>Un petit rappel pour commencer</summary><p>${esc(item.prerequisite)}</p></details>` : ''}<h2>Je découvre</h2><p class="lesson-copy">${esc(item.lesson)}</p><h3>Un exemple expliqué</h3><p class="lesson-copy">${esc(item.example)}</p>${visualHTML(item.visual)}${soundHTML(item)}${readingHTML(item)}</section>` + item.exercises.map(exercise => exerciseHTML(exercise, rec)).join('') + `<div id="step-status" class="feedback" aria-live="polite">${rec.validated ? '✓ Étape validée. Tu peux la réviser sans gagner de points supplémentaires.' : 'Réussis les exercices et fais observer les activités accompagnées pour avancer.'}</div><div class="row"><button id="next" data-testid="next-step" class="primary" ${rec.validated ? '' : 'disabled'}>Étape suivante →</button><button id="subject-back">Voir le chapitre</button></div>`;
+    main.innerHTML = notice() + `<button id="back" data-testid="back">← Retour au chapitre</button><p class="eyebrow">${esc(content.find(subject => subject.id === item.subjectId).title)} · ${esc(item.chapterTitle)}</p>${item.notion ? `<p class="notion-label">Notion : ${esc(item.notion)}</p>` : ''}<h1>${esc(item.title)}</h1><section class="lesson"><h2>🎯 Mon objectif</h2><p>${esc(item.objective)}</p>${item.prerequisite ? `<details><summary>Un petit rappel pour commencer</summary><p>${esc(item.prerequisite)}</p></details>` : ''}<h2>Je découvre</h2><p class="lesson-copy">${esc(item.lesson)}</p><h3>Un exemple expliqué</h3><p class="lesson-copy">${esc(item.example)}</p>${visualHTML(item.visual)}${window.CM2_VISUALS?.render(item) || ''}${soundHTML(item)}${readingHTML(item)}</section>` + item.exercises.map(exercise => exerciseHTML(exercise, rec)).join('') + `<div id="step-status" class="feedback" aria-live="polite">${rec.validated ? '✓ Étape validée. Tu peux la réviser sans gagner de points supplémentaires.' : 'Réussis les exercices et fais observer les activités accompagnées pour avancer.'}</div><div class="row"><button id="next" data-testid="next-step" class="primary" ${rec.validated ? '' : 'disabled'}>Étape suivante →</button><button id="subject-back">Voir le chapitre</button></div>`;
     $('#back').onclick = $('#subject-back').onclick = () => go({ page: 'subject', subject: item.subjectId });
     $('#next').onclick = () => {
       const subject = content.find(subject => subject.id === item.subjectId), chapter = subject.chapters.find(chapter => chapter.id === item.chapterId), index = chapter.steps.findIndex(step => step.id === item.id), next = chapter.steps[index + 1];
@@ -327,6 +316,7 @@
     };
     item.exercises.forEach(exercise => bindExercise(exercise, rec, item));
     bindSounds();
+    window.CM2_VISUALS?.bind(main);
   }
   function shuffled(options, id) {
     const result = [...(options || [])];
@@ -419,7 +409,7 @@
       else if (exercise.type === 'match') value = [...node.querySelectorAll('select')].map(select => select.value);
       else value = new FormData(event.currentTarget).get('answer');
       const result = checkAnswer(exercise, value);
-      if (!result.valid) { feedback.className = 'feedback'; feedback.textContent = 'Complète ta réponse avec une saisie lisible et les unités demandées. Aucun essai compté.'; return; }
+      if (!result.valid) { feedback.className = 'feedback'; feedback.textContent = (result.message || 'Complète ta réponse avec une saisie lisible et les unités demandées.') + ' Aucun essai compté.'; return; }
       child.history.push({ exercise: exercise.id, correct: result.correct, time: new Date().toISOString() });
       if (result.correct) {
         if (!rec.exercises.includes(exercise.id)) rec.exercises.push(exercise.id);

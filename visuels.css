@@ -1,0 +1,38 @@
+/* Supports pédagogiques locaux : les mots complètent toujours les formes et couleurs. */
+.pedagogical-support { border: 2px solid var(--edge); background: #fff; border-radius: var(--radius); padding: 22px; margin: 24px 0; min-width: 0; }
+.pedagogical-support h3 { margin-top: 0; color: var(--accent); }
+.pedagogical-support .support-description { max-width: 72ch; }
+.support-svg { width: 100%; height: auto; max-height: 430px; display: block; overflow: visible; color: #263c49; background: #fff; }
+.support-svg text { fill: #263c49; font: 22px system-ui, sans-serif; }
+.support-svg text[fill="#fff"] { fill: #fff; }
+.support-svg text.support-key { font-size: 32px; font-weight: 650; }
+.support-svg text[font-size="15"] { font-size: 15px; }
+.support-svg text[font-size="16"] { font-size: 16px; }
+.support-svg text[font-size="17"] { font-size: 17px; }
+.support-svg text[font-size="18"] { font-size: 18px; }
+.support-svg text[font-size="19"] { font-size: 19px; }
+.support-svg text[font-size="20"] { font-size: 20px; }
+.support-svg text[font-size="25"] { font-size: 25px; }
+.support-svg text[font-size="42"] { font-size: 42px; }
+.support-value { font-weight: 700; border-left: 4px solid var(--accent); padding: 10px 14px; background: var(--soft); }
+.support-manual, .support-playback { display: flex; flex-wrap: wrap; gap: 12px; align-items: end; margin: 14px 0; }
+.support-manual label { display: grid; gap: 8px; max-width: 100%; min-width: 0; flex: 1 1 180px; }
+.support-manual input[type=range] { width: 100%; min-height: 46px; accent-color: var(--accent); }
+.support-manual select { min-height: 46px; width: 100%; border: 1px solid var(--edge); border-radius: 10px; padding: 8px; background: white; color: inherit; }
+.support-playback button { flex: 1 1 auto; }
+.support-motion-note, .support-purpose { font-size: .88rem; color: var(--muted); }
+.support-static { border-top: 1px solid var(--edge); padding-top: 12px; margin-top: 18px; }
+.support-static summary { cursor: pointer; font-weight: 650; min-height: 44px; }
+.support-event-list { padding-left: 24px; }
+.support-word-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(125px, 1fr)); gap: 12px; margin: 12px 0; }
+.support-word-grid figure { min-width: 0; margin: 0; padding: 12px; border: 1px solid var(--edge); border-radius: 15px; text-align: center; background: #fafcff; }
+.support-word-grid svg { width: 100%; max-width: 145px; height: 120px; display: block; margin: 0 auto; }
+.support-word-grid figcaption { overflow-wrap: anywhere; display: grid; gap: 5px; }
+@media(max-width: 500px) {
+  .pedagogical-support { padding: 14px; }
+  .support-playback { display: grid; grid-template-columns: 1fr; }
+  .support-playback button { width: 100%; }
+  .support-word-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media(prefers-reduced-motion:reduce) { .pedagogical-support * { transition: none !important; animation: none !important; } }
+body.reduce-motion .pedagogical-support * { transition: none !important; animation: none !important; }

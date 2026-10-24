@@ -1,0 +1,98 @@
+{
+  "date": "2026-10-24T19:08:21.506Z",
+  "records": [
+    {
+      "id": "en-saluer",
+      "duration": 3.236
+    },
+    {
+      "id": "en-identite",
+      "duration": 4.626667
+    },
+    {
+      "id": "en-alphabet",
+      "duration": 13.548
+    },
+    {
+      "id": "en-famille",
+      "duration": 5.798
+    },
+    {
+      "id": "en-nombres",
+      "duration": 5.216667
+    },
+    {
+      "id": "en-classe",
+      "duration": 4.897958
+    },
+    {
+      "id": "en-date",
+      "duration": 7.683292
+    },
+    {
+      "id": "en-heure",
+      "duration": 5.615292
+    },
+    {
+      "id": "en-meteo",
+      "duration": 5.191333
+    },
+    {
+      "id": "en-gouts",
+      "duration": 6.78525
+    },
+    {
+      "id": "en-portrait",
+      "duration": 5.188667
+    },
+    {
+      "id": "en-maison",
+      "duration": 5.853958
+    },
+    {
+      "id": "en-ville",
+      "duration": 6.830625
+    },
+    {
+      "id": "en-capacites",
+      "duration": 5.431917
+    },
+    {
+      "id": "en-recits",
+      "duration": 7.607958
+    },
+    {
+      "id": "en-ecrire",
+      "duration": 6.206
+    },
+    {
+      "id": "en-pays",
+      "duration": 6.474
+    },
+    {
+      "id": "en-culture",
+      "duration": 8.146667
+    },
+    {
+      "id": "en-sons",
+      "duration": 5.821292
+    },
+    {
+      "id": "en-projet",
+      "duration": 7.057958
+    },
+    {
+      "id": "en-copie-dictee",
+      "duration": 3.533917
+    },
+    {
+      "id": "en-mediation",
+      "duration": 5.465292
+    },
+    {
+      "id": "en-cooperer",
+      "duration": 6.165958
+    }
+  ],
+  "scope": "Décodage et commandes de lecture, sans évaluation humaine de prononciation."
+}

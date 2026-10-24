@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-24T06:15:16.915Z",
+  "date": "2026-10-24T19:06:42.329Z",
   "scripts": [
     "contenus/francais.js",
     "contenus/mathematiques.js",
@@ -15,7 +15,11 @@
     "contenus/transversaux.js",
     "ressources/audio/data.js",
     "contenus/bibliotheque.js",
-    "contents.js"
+    "contents.js",
+    "ressources/voix/data.js",
+    "voix.js",
+    "contenus/supports-visuels.js",
+    "supports-visuels.js"
   ],
   "subjects": [
     {
