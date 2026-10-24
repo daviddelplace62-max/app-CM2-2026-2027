@@ -1,0 +1,109 @@
+{
+  "date": "2026-10-24T06:15:16.915Z",
+  "scripts": [
+    "contenus/francais.js",
+    "contenus/mathematiques.js",
+    "contenus/histoire.js",
+    "contenus/geographie.js",
+    "contenus/sciences.js",
+    "contenus/anglais.js",
+    "contenus/emc.js",
+    "contenus/arts-plastiques.js",
+    "contenus/musique.js",
+    "contenus/histoire-arts.js",
+    "contenus/eps.js",
+    "contenus/transversaux.js",
+    "ressources/audio/data.js",
+    "contenus/bibliotheque.js",
+    "contents.js"
+  ],
+  "subjects": [
+    {
+      "id": "francais",
+      "chapters": 9,
+      "steps": 83,
+      "exercises": 173
+    },
+    {
+      "id": "mathematiques",
+      "chapters": 11,
+      "steps": 72,
+      "exercises": 159
+    },
+    {
+      "id": "histoire",
+      "chapters": 3,
+      "steps": 19,
+      "exercises": 39
+    },
+    {
+      "id": "geographie",
+      "chapters": 3,
+      "steps": 19,
+      "exercises": 40
+    },
+    {
+      "id": "sciences",
+      "chapters": 4,
+      "steps": 45,
+      "exercises": 103
+    },
+    {
+      "id": "anglais",
+      "chapters": 5,
+      "steps": 24,
+      "exercises": 72
+    },
+    {
+      "id": "emc",
+      "chapters": 3,
+      "steps": 13,
+      "exercises": 39
+    },
+    {
+      "id": "arts-plastiques",
+      "chapters": 2,
+      "steps": 10,
+      "exercises": 30
+    },
+    {
+      "id": "musique",
+      "chapters": 3,
+      "steps": 13,
+      "exercises": 39
+    },
+    {
+      "id": "histoire-arts",
+      "chapters": 3,
+      "steps": 10,
+      "exercises": 30
+    },
+    {
+      "id": "eps",
+      "chapters": 5,
+      "steps": 13,
+      "exercises": 39
+    },
+    {
+      "id": "transversaux",
+      "chapters": 5,
+      "steps": 19,
+      "exercises": 57
+    }
+  ],
+  "total": {
+    "subjects": 12,
+    "steps": 340,
+    "exercises": 820,
+    "audioTracks": 11
+  },
+  "types": {
+    "choice": 324,
+    "text": 27,
+    "guided": 241,
+    "number": 124,
+    "order": 37,
+    "match": 67
+  },
+  "scope": "Structure des données et solutions déclarées ; ne certifie pas à elle seule l’exhaustivité officielle ou les corrigés."
+}

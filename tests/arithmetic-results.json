@@ -1,0 +1,196 @@
+{
+  "date": "2026-10-24T06:15:16.893Z",
+  "checked": [
+    {
+      "id": "mathematiques-calcul-faits-ex1",
+      "prompt": "Calcule 7 × 8.",
+      "expected": 56
+    },
+    {
+      "id": "mathematiques-calcul-dix-ex1",
+      "prompt": "Calcule 4,083 × 100.",
+      "expected": 408.3
+    },
+    {
+      "id": "mathematiques-calcul-dix-ex2",
+      "prompt": "Calcule 27 ÷ 1 000.",
+      "expected": 0.027
+    },
+    {
+      "id": "mathematiques-calcul-ajuster-ex1",
+      "prompt": "Calcule mentalement 146 − 29.",
+      "expected": 117
+    },
+    {
+      "id": "mathematiques-calcul-ajuster-ex2",
+      "prompt": "Calcule 4,7 + 3,8.",
+      "expected": 8.5
+    },
+    {
+      "id": "mathematiques-calcul-ajuster-ex3",
+      "prompt": "Calcule 6,75 + 4.",
+      "expected": 10.75
+    },
+    {
+      "id": "mathematiques-calcul-distributivite-ex1",
+      "prompt": "Calcule 6 × 48.",
+      "expected": 288
+    },
+    {
+      "id": "mathematiques-calcul-distributivite-ex2",
+      "prompt": "Calcule 30 × 400.",
+      "expected": 12000
+    },
+    {
+      "id": "mathematiques-calcul-demidouble-ex1",
+      "prompt": "Calcule 84 ÷ 4.",
+      "expected": 21
+    },
+    {
+      "id": "mathematiques-calcul-cinq-ex1",
+      "prompt": "Calcule 6,4 × 5.",
+      "expected": 32
+    },
+    {
+      "id": "mathematiques-calcul-cinq-ex2",
+      "prompt": "Calcule 3,6 × 50.",
+      "expected": 180
+    },
+    {
+      "id": "mathematiques-calcul-additionposee-ex1",
+      "prompt": "Calcule 37,85 + 6,7.",
+      "expected": 44.550000000000004
+    },
+    {
+      "id": "mathematiques-calcul-additionposee-ex2",
+      "prompt": "Calcule 20 − 7,36.",
+      "expected": 12.64
+    },
+    {
+      "id": "mathematiques-calcul-multiplication-ex1",
+      "prompt": "Calcule 14,6 × 7.",
+      "expected": 102.2
+    },
+    {
+      "id": "mathematiques-calcul-divisiondecimale-ex1",
+      "prompt": "Calcule 27 ÷ 4.",
+      "expected": 6.75
+    },
+    {
+      "id": "mathematiques-calcul-divisiondecimale-ex2",
+      "prompt": "Calcule 18,6 ÷ 3.",
+      "expected": 6.2
+    }
+  ],
+  "notAutomaticallyChecked": [
+    "mathematiques-fractions-sens-ex2",
+    "mathematiques-fractions-droite-ex1",
+    "mathematiques-fractions-droite-ex2",
+    "mathematiques-fractions-decomposer-ex1",
+    "mathematiques-fractions-decomposer-ex2",
+    "mathematiques-fractions-equivalentes-ex1",
+    "mathematiques-fractions-addition-ex1",
+    "mathematiques-fractions-addition-ex2",
+    "mathematiques-fractions-addition-ex3",
+    "mathematiques-fractions-produit-ex1",
+    "mathematiques-fractions-produit-ex2",
+    "mathematiques-fractions-quantite-ex1",
+    "mathematiques-fractions-quantite-ex2",
+    "mathematiques-decimaux-milliemes-ex1",
+    "mathematiques-decimaux-milliemes-ex2",
+    "mathematiques-decimaux-ecritures-ex1",
+    "mathematiques-decimaux-ecritures-ex2",
+    "mathematiques-decimaux-ecritures-ex3",
+    "mathematiques-decimaux-droite-ex1",
+    "mathematiques-decimaux-arrondi-ex1",
+    "mathematiques-decimaux-arrondi-ex2",
+    "mathematiques-decimaux-arrondi-ex3",
+    "mathematiques-entiers-numeration-ex1",
+    "mathematiques-entiers-numeration-ex2",
+    "mathematiques-entiers-relations-ex1",
+    "mathematiques-entiers-relations-ex2",
+    "mathematiques-entiers-ordre-ex2",
+    "mathematiques-entiers-multiples-ex2",
+    "mathematiques-entiers-communs-ex2",
+    "mathematiques-calcul-faits-ex2",
+    "mathematiques-calcul-faits-ex3",
+    "mathematiques-calcul-demidouble-ex2",
+    "mathematiques-calcul-demidouble-ex3",
+    "mathematiques-calcul-multiplication-ex2",
+    "mathematiques-calcul-divisioneuclidienne-ex1",
+    "mathematiques-calcul-divisioneuclidienne-ex2",
+    "mathematiques-calcul-parentheses-ex1",
+    "mathematiques-problemes-additifs-ex1",
+    "mathematiques-problemes-additifs-ex2",
+    "mathematiques-problemes-partiestout-ex1",
+    "mathematiques-problemes-partiestout-ex2",
+    "mathematiques-problemes-mixte-ex1",
+    "mathematiques-problemes-mixte-ex2",
+    "mathematiques-problemes-comparaison-ex1",
+    "mathematiques-problemes-comparaison-ex2",
+    "mathematiques-problemes-denombrement-ex1",
+    "mathematiques-problemes-optimisation-ex1",
+    "mathematiques-problemes-algorithme-ex1",
+    "mathematiques-algebre-egalite-ex1",
+    "mathematiques-algebre-egalite-ex2",
+    "mathematiques-algebre-symboles-ex1",
+    "mathematiques-algebre-symboles-ex2",
+    "mathematiques-algebre-programme-ex1",
+    "mathematiques-algebre-suites-ex1",
+    "mathematiques-algebre-suites-ex2",
+    "mathematiques-mesures-unites-ex1",
+    "mathematiques-mesures-unites-ex2",
+    "mathematiques-mesures-unites-ex3",
+    "mathematiques-mesures-perimetre-ex1",
+    "mathematiques-mesures-perimetre-ex2",
+    "mathematiques-mesures-aire-ex1",
+    "mathematiques-mesures-airesunites-ex1",
+    "mathematiques-mesures-airesunites-ex2",
+    "mathematiques-mesures-rectangles-ex1",
+    "mathematiques-mesures-rectangles-ex2",
+    "mathematiques-mesures-angles-ex1",
+    "mathematiques-mesures-construireangles-ex1",
+    "mathematiques-mesures-horloge-ex1",
+    "mathematiques-mesures-durees-ex1",
+    "mathematiques-mesures-durees-ex2",
+    "mathematiques-geometrie-quadrilateres-ex2",
+    "mathematiques-geometrie-cercle-ex1",
+    "mathematiques-geometrie-symetrie-ex1",
+    "mathematiques-geometrie-solides-ex1",
+    "mathematiques-geometrie-deplacements-ex1",
+    "mathematiques-donnees-tableau-ex1",
+    "mathematiques-donnees-tableau-ex2",
+    "mathematiques-donnees-barres-ex1",
+    "mathematiques-donnees-barres-ex2",
+    "mathematiques-donnees-courbe-ex1",
+    "mathematiques-donnees-circulaire-ex1",
+    "mathematiques-donnees-circulaire-ex2",
+    "mathematiques-probabilites-issues-ex1",
+    "mathematiques-probabilites-chances-ex1",
+    "mathematiques-probabilites-chances-ex2",
+    "mathematiques-probabilites-deuxetapes-ex1",
+    "mathematiques-probabilites-deuxetapes-ex2",
+    "mathematiques-proportionnalite-multiplier-ex1",
+    "mathematiques-proportionnalite-multiplier-ex2",
+    "mathematiques-proportionnalite-additionner-ex1",
+    "mathematiques-proportionnalite-additionner-ex2",
+    "h-centenaire-e1",
+    "h-industrie-enquete-e1",
+    "g-villes-e1",
+    "g-inegalites-e1",
+    "s-masse-e1",
+    "s-masse-e2",
+    "s-volume-e1",
+    "s-dissoudre-e1",
+    "s-mouvement-e2",
+    "s-mouvement-convertir-distance",
+    "s-mouvement-convertir-duree",
+    "s-solaire-e1",
+    "s-mesures-e2",
+    "en-nombres-e2",
+    "eps-observer-e2",
+    "tr-donnees-e1",
+    "tr-programmer-e2"
+  ],
+  "scope": "Uniquement calculs binaires explicites correspondant au motif ; les autres corrigés ne sont pas certifiés par ce test."
+}

@@ -1,21 +1,39 @@
-# Tests du socle technique
+# Recette reproductible
 
-Ces essais portent sur le moteur de l'application et les données de recette `technique-v1`. Ils ne vérifient ni des cours ni la couverture officielle du CM2.
+L'application n'a aucune dépendance pour son utilisation. Les outils ci-dessous sont destinés au développement et restent hors du dossier statique.
 
 ## Prérequis
 
-Node.js et Chromium. Playwright est une dépendance de développement uniquement, jamais requise pour utiliser le dossier statique.
+Node.js, Python 3, Chromium et Playwright 1.64.1. Dans cet environnement :
 
 ```sh
-npm install --prefix /workspace/cm2-tools --cache /workspace/cm2-tools/npm-cache playwright@1.64.1
+npm install --prefix /workspace/cm2-tools --cache /workspace/cm2-tools/npm-cache --no-audit --no-fund --save-exact playwright@1.64.1
+```
+
+Depuis la racine du dépôt :
+
+```sh
 node tests/check-content.cjs
+node tests/check-coverage.cjs
+node tests/check-arithmetic.cjs
 python3 -m http.server 8080 --bind 127.0.0.1
-# Dans un second terminal, depuis la racine du dépôt :
+```
+
+Dans un second terminal, depuis la même racine :
+
+```sh
 node tests/browser.cjs
 ```
 
-Le script cherche Playwright dans les dépendances normales, puis dans `/workspace/cm2-tools/node_modules`. Sur une autre machine, utiliser `NODE_PATH` pour pointer sur son installation Playwright. Définir `CHROMIUM_PATH` si Chromium n'est pas dans `/usr/bin/chromium`.
+Si le serveur tourne déjà sur ce port, ne pas le lancer une deuxième fois. Le script navigateur cherche Playwright dans les modules habituels puis dans `/workspace/cm2-tools/node_modules`. Sur une autre machine, définir `NODE_PATH` pour son installation ; `CHROMIUM_PATH` remplace `/usr/bin/chromium` et `CM2_TEST_URL` remplace `http://127.0.0.1:8080/`.
 
-Le navigateur charge le serveur statique local `http://127.0.0.1:8080`, dans un contexte neuf, sans compte ni service externe. `CM2_TEST_URL` permet de choisir une autre adresse de test. Une tentative directe par `file://` a été refusée par la politique du Chromium cloud (`ERR_BLOCKED_BY_ADMINISTRATOR`) : la compatibilité par double-clic n’est donc pas validée dans cet environnement. Aucun contournement de politique n’a été utilisé. Les résultats de la dernière exécution sont enregistrés dans `browser-results.json`. Une assertion échouée donne un code de sortie non nul.
+## Ce qui est contrôlé
 
-Le contrôle structurel refuse les identifiants dupliqués, chapitres vides, étapes sans exercice, consignes ou indices absents, exercices automatiques sans réponse et exercices accompagnés sans critères. Il ne certifie pas un corrigé disciplinaire.
+- `check-content.cjs` charge les scripts déclarés par `index.html` dans leur ordre réel et contrôle disciplines, identifiants, absence de fixtures, chapitres, étapes, exercices, corrigés, critères, prérequis explicites, tableaux/frises/cartes/diagrammes et égalité binaire des pistes WAV avec leurs données embarquées.
+- `check-coverage.cjs` contrôle les liens de `coverage-map.json` : chaque compétence déclarée possède des étapes existantes avec activités, et toutes les étapes sont rattachées à la matrice.
+- `check-arithmetic.cjs` recalcule indépendamment les opérations binaires explicites reconnues dans les consignes. Il indique séparément les réponses numériques que son motif ne permet pas de vérifier. Il ne valide pas automatiquement tous les problèmes rédigés.
+- `browser.cjs` pilote un vrai Chromium par les commandes visibles : création de profils, navigation et résolution d'un parcours par matière, sauvegarde, export téléchargé, import refusé/restauré/annulé, thèmes, validation accompagnée, menu mobile et largeurs 360/390/1440. Il vérifie aussi tous les corrigés déclarés par l’API du moteur, les déplacements au clavier et au toucher, les associations, les textes de lecture, les trois types de diagrammes, la lecture des onze pistes audio et l’absence de requête après chargement. Un manifeste SHA-256 empêche de valider une recette pendant laquelle les fichiers de l’application auraient changé. Les tests de parseur utilisent également l'API du moteur. La navigation directe d'API sert aux contrôles d'écrans ; la réussite des exercices n'est pas injectée dans l'état.
+
+Les fichiers `*-results.json` contiennent les résultats horodatés de la dernière exécution. Un contrôle échoué produit un code de sortie non nul. Lire `../RAPPORT_TESTS.md` pour le bilan et les limites. Une réussite de structure ou de navigateur n'est pas une preuve indépendante d'exhaustivité du programme officiel.
+
+Le navigateur cloud bloque actuellement les URL `file://` avant le chargement (`ERR_BLOCKED_BY_ADMINISTRATOR`). Le test retente cette ouverture et l'enregistre séparément ; aucun contournement de politique n'est utilisé. La recette fonctionnelle utilise le serveur HTTP local. Aucun lien localhost n'est un lien public de partage.

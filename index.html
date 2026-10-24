@@ -1,3 +1,48 @@
 <!doctype html>
-<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>L'atelier CM2 · 2026–2027</title><link rel="stylesheet" href="styles.css"></head>
-<body data-theme="squishy"><div id="storage-warning" role="alert" hidden>Le stockage est indisponible. Votre progression ne sera pas conservée : exportez votre sauvegarde avant de quitter.</div><header><button id="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false">☰</button><a class="brand" href="#dashboard">✦ L’atelier <strong>CM2</strong></a><button id="profile-button">Mes profils</button></header><div id="backdrop" hidden></div><aside id="sidebar" aria-label="Navigation"><button id="menu-close">Fermer le menu ✕</button><p class="eyebrow">MON ATELIER</p><nav id="nav"></nav><p class="local-note">🔒 Mes données restent dans ce navigateur.<br>Pas de synchronisation entre appareils.</p></aside><main id="main" tabindex="-1"></main><div id="live" class="sr-only" aria-live="polite"></div><input id="import-file" type="file" accept="application/json,.json" hidden><script src="contents.js"></script><script src="app.js"></script></body></html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#7542a4">
+  <meta name="description" content="Un atelier personnel pour apprendre et réviser en CM2, sans compte ni publicité.">
+  <title>L'atelier CM2 · 2026–2027</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-theme="squishy">
+  <a class="skip-link" href="#main">Aller au contenu</a>
+  <div id="storage-warning" role="alert" hidden>Le stockage est indisponible. Votre progression ne sera pas conservée : exportez votre sauvegarde avant de quitter.</div>
+  <header>
+    <button id="menu-toggle" aria-label="Ouvrir le menu" aria-controls="sidebar" aria-expanded="false">☰</button>
+    <a class="brand" href="#dashboard">✦ L’atelier <strong>CM2</strong></a>
+    <button id="profile-button">Mes profils</button>
+  </header>
+  <div id="backdrop" hidden></div>
+  <aside id="sidebar" aria-label="Navigation des matières">
+    <button id="menu-close">Fermer le menu ✕</button>
+    <p class="eyebrow">MON ATELIER</p>
+    <nav id="nav"></nav>
+    <p class="local-note">🔒 Mes données restent dans ce navigateur.<br>Pas de synchronisation entre appareils.</p>
+  </aside>
+  <main id="main" tabindex="-1"></main>
+  <div id="live" class="sr-only" aria-live="polite"></div>
+  <input id="import-file" type="file" accept="application/json,.json" hidden>
+  <noscript>Cette application a besoin de JavaScript pour les exercices et la sauvegarde locale. Activez-le dans les paramètres de votre navigateur.</noscript>
+  <script>window.CM2_SUBJECTS = [];</script>
+  <script src="contenus/francais.js"></script>
+  <script src="contenus/mathematiques.js"></script>
+  <script src="contenus/histoire.js"></script>
+  <script src="contenus/geographie.js"></script>
+  <script src="contenus/sciences.js"></script>
+  <script src="contenus/anglais.js"></script>
+  <script src="contenus/emc.js"></script>
+  <script src="contenus/arts-plastiques.js"></script>
+  <script src="contenus/musique.js"></script>
+  <script src="contenus/histoire-arts.js"></script>
+  <script src="contenus/eps.js"></script>
+  <script src="contenus/transversaux.js"></script>
+  <script src="ressources/audio/data.js"></script>
+  <script src="contenus/bibliotheque.js"></script>
+  <script src="contents.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,110 +1,264 @@
 {
-  "date": "2026-10-23T17:47:09.796Z",
-  "scope": "Socle technique uniquement, couverture pédagogique non vérifiée",
+  "date": "2026-10-24T06:16:04.667Z",
+  "browser": "154.0.8037.57",
+  "scope": "Parcours fonctionnels sur les contenus locaux du dépôt ; ne certifie pas à lui seul la conformité officielle des contenus.",
+  "fileProtocol": {
+    "status": "non exécutable",
+    "reason": "page.goto: net::ERR_BLOCKED_BY_ADMINISTRATOR at file:///workspace/app-CM2-2026-2027/index.html\nCall log:\n\u001b[2m  - navigating to \"file:///workspace/app-CM2-2026-2027/index.html\", waiting until \"load\"\u001b[22m\n"
+  },
+  "subjects": [
+    {
+      "id": "francais",
+      "title": "Français"
+    },
+    {
+      "id": "mathematiques",
+      "title": "Mathématiques"
+    },
+    {
+      "id": "histoire",
+      "title": "Histoire"
+    },
+    {
+      "id": "geographie",
+      "title": "Géographie"
+    },
+    {
+      "id": "sciences",
+      "title": "Sciences et technologie"
+    },
+    {
+      "id": "anglais",
+      "title": "Anglais"
+    },
+    {
+      "id": "emc",
+      "title": "Enseignement moral et civique"
+    },
+    {
+      "id": "arts-plastiques",
+      "title": "Arts plastiques"
+    },
+    {
+      "id": "musique",
+      "title": "Éducation musicale"
+    },
+    {
+      "id": "histoire-arts",
+      "title": "Histoire des arts"
+    },
+    {
+      "id": "eps",
+      "title": "Éducation physique et sportive"
+    },
+    {
+      "id": "transversaux",
+      "title": "Numérique, médias et vie relationnelle"
+    }
+  ],
+  "totalSteps": 340,
+  "testedAssets": {
+    "index.html": "88e494de1ea30db83ec3fd55fc2c4e94e2b10d0d94a89392ea5047f8b8318e1b",
+    "styles.css": "64d7aec27120360fdd512b9cbd2318eff214fb3455b0ebcb1eba1c3879a15395",
+    "contenus/francais.js": "1fb49894f5f435707e240ec26411270420fd8654cf8d396bf840c52701d4010f",
+    "contenus/mathematiques.js": "1a58909707de643a69a88344026a3bc3232ae8170d1e46c6839d87c6bc8aa00b",
+    "contenus/histoire.js": "eae72015b065db51e7d2e23d34ed813163cf366f2e15435119d91aac75739d79",
+    "contenus/geographie.js": "4d29e7acab366eb89d4a541a3ccba78d4fee2fff0e8d3046fc7dd88334fb1ea9",
+    "contenus/sciences.js": "74b544c43406b7b108c9893938849c96516996ea2929e8af72d47286573b899f",
+    "contenus/anglais.js": "22861ba3f9ec69fe31f326c48095a72fefc40b451e7901de5056c16dca542c24",
+    "contenus/emc.js": "cdb8ea4952f49a8528518e71d2f6fe691da0a0795f63bfcdf1ee2c884bf15b84",
+    "contenus/arts-plastiques.js": "88dc954fbb2c51d5befe560b8f9fa6bcfe78626db82faf1e9ecf183705257303",
+    "contenus/musique.js": "a6939471a0543de827cb2dea3779b4db523718e5ad9508a4c482a91a8602b04e",
+    "contenus/histoire-arts.js": "49c9171d157e68e819c420b92a0d97a0a1ec54577d2b76802b3255ebf6ca9bf5",
+    "contenus/eps.js": "a20e33ad4f15815be6e8e9e1c7bd5385c3ab9a0b54f359b214090137c0090857",
+    "contenus/transversaux.js": "2fe54bd8983fade44f48a0a38e81052833f61a91001c36b06a20f5c486d794f8",
+    "ressources/audio/data.js": "e4e0081c793292ce42563b213f2921649d89c82ff429d50c3fde91aa391e2a7c",
+    "contenus/bibliotheque.js": "177029d477b961c94ec804e3eca277018a64ad822bdb5d7aa46a7a2e189aa167",
+    "contents.js": "155341b22068576c030d3eefe5b6daa6333930055c3fd30a60b74e741467b584",
+    "app.js": "d808a068054c17c602f017ca49759559d49f7f26ec74c6c1da2545d47bf753f1"
+  },
+  "audioResult": {
+    "stepsTested": 11,
+    "distinctTracks": 11
+  },
+  "readingResult": {
+    "stepsWithReading": 15
+  },
+  "answerResult": {
+    "exercises": 579,
+    "variants": 584,
+    "invalid": []
+  },
   "results": [
     {
-      "name": "Chargement sans erreur JavaScript",
+      "name": "Tous les contenus locaux se chargent sans erreur JavaScript",
       "status": "réussi"
     },
     {
-      "name": "Création de deux profils et présélection des thèmes",
+      "name": "Tous les corrigés automatiques déclarés sont interprétables par le moteur",
       "status": "réussi"
     },
     {
-      "name": "Saisie numérique et accents : parseur",
+      "name": "Deux profils séparés et présélection des deux thèmes",
       "status": "réussi"
     },
     {
-      "name": "Parcours francais : accès, erreur bloquante, indices, retour et validation",
+      "name": "Correction numérique : virgule, point, fraction, unités et accents conservés",
       "status": "réussi"
     },
     {
-      "name": "Parcours mathematiques : accès, erreur bloquante, indices, retour et validation",
+      "name": "Parcours Français : accès libre, prérequis, erreur/indice, correction et retour",
       "status": "réussi"
     },
     {
-      "name": "Parcours histoire : accès, erreur bloquante, indices, retour et validation",
+      "name": "Parcours Mathématiques : accès libre, prérequis, erreur/indice, correction et retour",
       "status": "réussi"
     },
     {
-      "name": "Parcours geographie : accès, erreur bloquante, indices, retour et validation",
+      "name": "Parcours Histoire : accès libre, prérequis, erreur/indice, correction et retour",
       "status": "réussi"
     },
     {
-      "name": "Parcours sciences : accès, erreur bloquante, indices, retour et validation",
+      "name": "Parcours Géographie : accès libre, prérequis, erreur/indice, correction et retour",
       "status": "réussi"
     },
     {
-      "name": "Parcours anglais : accès, erreur bloquante, indices, retour et validation",
+      "name": "Parcours Sciences et technologie : accès libre, prérequis, erreur/indice, correction et retour",
       "status": "réussi"
     },
     {
-      "name": "Parcours emc : accès, erreur bloquante, indices, retour et validation",
+      "name": "Parcours Anglais : accès libre, prérequis, erreur/indice, correction et retour",
       "status": "réussi"
     },
     {
-      "name": "Parcours arts-plastiques : accès, erreur bloquante, indices, retour et validation",
+      "name": "Parcours Enseignement moral et civique : accès libre, prérequis, erreur/indice, correction et retour",
       "status": "réussi"
     },
     {
-      "name": "Parcours musique : accès, erreur bloquante, indices, retour et validation",
+      "name": "Parcours Arts plastiques : accès libre, prérequis, erreur/indice, correction et retour",
       "status": "réussi"
     },
     {
-      "name": "Parcours histoire-arts : accès, erreur bloquante, indices, retour et validation",
+      "name": "Parcours Éducation musicale : accès libre, prérequis, erreur/indice, correction et retour",
       "status": "réussi"
     },
     {
-      "name": "Parcours eps : accès, erreur bloquante, indices, retour et validation",
+      "name": "Parcours Histoire des arts : accès libre, prérequis, erreur/indice, correction et retour",
       "status": "réussi"
     },
     {
-      "name": "Progression pondérée, profils indépendants et absence de double points",
+      "name": "Parcours Éducation physique et sportive : accès libre, prérequis, erreur/indice, correction et retour",
       "status": "réussi"
     },
     {
-      "name": "Activité réalisée distincte de observation adulte",
+      "name": "Parcours Numérique, médias et vie relationnelle : accès libre, prérequis, erreur/indice, correction et retour",
       "status": "réussi"
     },
     {
-      "name": "Positions indépendantes et sauvegarde après rechargement",
+      "name": "Progression générale pondérée par toutes les étapes ; profils indépendants ; points non répétés",
       "status": "réussi"
     },
     {
-      "name": "Changement thème et surnom sans perte ; HTML du surnom échappé",
+      "name": "Progressions de matière, taux des réponses et points expliqués sur le tableau de bord",
       "status": "réussi"
     },
     {
-      "name": "Export JSON valide, refus import invalide et restauration import",
+      "name": "Réalisé, auto-corrigé et observation adulte restent distincts",
       "status": "réussi"
     },
     {
-      "name": "Import : objets imbriqués malformés et dates invalides refusés",
+      "name": "Reprise indépendante de chaque matière et conservation après rechargement",
       "status": "réussi"
     },
     {
-      "name": "Annulation import conserve tous les profils",
+      "name": "Activité order : interactions accessibles, erreur, indice et correction",
       "status": "réussi"
     },
     {
-      "name": "Menu mobile : focus, Échap, fermeture fond, clavier",
+      "name": "Activité match : interactions accessibles, erreur, indice et correction",
       "status": "réussi"
     },
     {
-      "name": "Aucun débordement horizontal à 360, 390 et 1440 pixels",
+      "name": "Anglais : texte audio présent et état lisible sans promesse de correction de prononciation",
       "status": "réussi"
     },
     {
-      "name": "Avertissement visible si stockage indisponible",
+      "name": "Toutes les pistes musicales locales sont embarquées, décodées et lisibles sans réseau supplémentaire",
       "status": "réussi"
     },
     {
-      "name": "Suppression profil : annulation puis confirmation",
+      "name": "Textes intégraux : toutes les lectures présentes sont affichées avec retours à la ligne et attribution",
       "status": "réussi"
     },
     {
-      "name": "Aucune erreur JavaScript après redimensionnement",
+      "name": "Diagrammes mathématiques : barres, courbe et disque réels, données alternatives et corrigés cohérents",
+      "status": "réussi"
+    },
+    {
+      "name": "Changement des deux thèmes et du surnom sans perte ni injection HTML",
+      "status": "réussi"
+    },
+    {
+      "name": "Export JSON téléchargé, import invalide refusé et restauration",
+      "status": "réussi"
+    },
+    {
+      "name": "Import : structures imbriquées malformées et dates invalides rejetées",
+      "status": "réussi"
+    },
+    {
+      "name": "Ancienne progression technique conservée à l’import mais exclue des résultats scolaires actuels",
+      "status": "réussi"
+    },
+    {
+      "name": "Annulation d’import sans perte",
+      "status": "réussi"
+    },
+    {
+      "name": "Menu mobile : focus, boucle clavier, Échap, fond et retour du focus",
+      "status": "réussi"
+    },
+    {
+      "name": "Aucun débordement horizontal à 360,390,1440 : profils, réglages, tous chapitres, exercices, lectures et diagrammes",
+      "status": "réussi"
+    },
+    {
+      "name": "Stockage indisponible : avertissement visible",
+      "status": "réussi"
+    },
+    {
+      "name": "Suppression de profil annulée puis confirmée sans toucher au second",
+      "status": "réussi"
+    },
+    {
+      "name": "Aucun appel réseau externe et aucune erreur JavaScript pendant toute la recette",
+      "status": "réussi"
+    },
+    {
+      "name": "Les fichiers d’application sont restés identiques pendant toute la recette",
       "status": "réussi"
     }
-  ]
+  ],
+  "network": [
+    "http://127.0.0.1:8081/",
+    "http://127.0.0.1:8081/styles.css",
+    "http://127.0.0.1:8081/contenus/francais.js",
+    "http://127.0.0.1:8081/contenus/mathematiques.js",
+    "http://127.0.0.1:8081/contenus/histoire.js",
+    "http://127.0.0.1:8081/contenus/geographie.js",
+    "http://127.0.0.1:8081/contenus/sciences.js",
+    "http://127.0.0.1:8081/contenus/anglais.js",
+    "http://127.0.0.1:8081/contenus/emc.js",
+    "http://127.0.0.1:8081/contenus/arts-plastiques.js",
+    "http://127.0.0.1:8081/contenus/musique.js",
+    "http://127.0.0.1:8081/contenus/histoire-arts.js",
+    "http://127.0.0.1:8081/contenus/eps.js",
+    "http://127.0.0.1:8081/contenus/transversaux.js",
+    "http://127.0.0.1:8081/ressources/audio/data.js",
+    "http://127.0.0.1:8081/contenus/bibliotheque.js",
+    "http://127.0.0.1:8081/contents.js",
+    "http://127.0.0.1:8081/app.js"
+  ],
+  "lateNetwork": [],
+  "errors": []
 }
